@@ -13,6 +13,15 @@ export default function Navi() {
           <Menu.Item name="home" />
           <Menu.Item name="messages" />
           <Menu.Item name="friends" />
+
+
+
+          <Menu.Item position="right">
+              <Button circular color='facebook' icon='facebook' />
+              <Button circular color='twitter' icon='twitter' />
+              <Button circular color='linkedin' icon='linkedin' />
+               <Button circular color='google plus' icon='google plus' />
+          </Menu.Item>
           
 
           <Menu.Item position="right">
@@ -22,6 +31,10 @@ export default function Navi() {
                 <Button color='teal' >Sign In</Button>
               </Button.Group>
             </Menu.Item>
+
+           
+
+
         </Container>
       </Menu>
     </div>

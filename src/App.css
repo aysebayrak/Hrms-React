@@ -2,3 +2,12 @@
   text-align: center;
 }
 
+.ui.sidebar{
+  margin-left: 4em;
+ }
+
+ 
+.ui.main.container{
+  margin-top: 7em;
+}
+
