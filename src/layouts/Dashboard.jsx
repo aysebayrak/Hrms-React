@@ -18,9 +18,6 @@ export default function Dashboard() {
         </Grid.Row>
       </Grid>
             
-     
-   
-    
        </div>
     )
 }

@@ -11,7 +11,7 @@ export default function Navi() {
             AYŞE BAYRAK
           </Menu.Item>
           <Menu.Item name="home" />
-          <Menu.Item name="messages" />
+          <Menu.Item name="Job Advert" />
           <Menu.Item name="friends" />
 
 
