@@ -27,8 +27,8 @@ export default function Navi() {
           <Menu.Item position="right">
               <Button.Group>
                 <Button  color='orange'>Sign Up</Button>
-                <Button.Or />
-                <Button color='teal' >Sign In</Button>
+                {/* <Button.Or/> */}
+                <Button color='teal' style={{marginLeft:'0.4em'}} >Sign In</Button>
               </Button.Group>
             </Menu.Item>
 
