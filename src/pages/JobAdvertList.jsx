@@ -34,9 +34,9 @@ export default function JobAdvertList() {
         <Table.Body>
           {adverts.map((advert) => {
             <Table.Row  key={advert.id}>
-              <Table.Cell>{advert.title}</Table.Cell>
-              <Table.Cell>{advert.companyName}</Table.Cell>
-              <Table.Cell>{advert.city}</Table.Cell>
+              <Table.Cell>{advert.jobTitle.title}</Table.Cell>
+              <Table.Cell>{advert.employer.companyName}</Table.Cell>
+              <Table.Cell>{advert.city.name}</Table.Cell>
               <Table.Cell>{advert.openPositionCount}</Table.Cell>
             </Table.Row>;
           })}
