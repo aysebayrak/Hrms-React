@@ -123,7 +123,7 @@ export default function JobPostingAdd() {
             <Card fluid>
                {/* <Card.Content  header='İş İlanı Ekle'/> */}
                <Header as="h2" color="orange">
-                <Icon name="folder open" />
+                <Icon name="calendar outline" />
                     <Header.Content>İş İlanı Ekle</Header.Content>
                 </Header>
                 <Card.Content>
