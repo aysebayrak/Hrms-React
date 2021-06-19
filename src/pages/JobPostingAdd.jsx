@@ -86,6 +86,9 @@ export default function JobPostingAdd() {
            applicationDeadline:Yup.string().required("Son Başvuru Tarihi Boş Bırakılamaz"),
            workTimeId:Yup.string().required("Çalışma Zaman Tipi Boş Bırakılamaz"),
            workPlaceId: Yup.string().required("Çalışma Tipi Boş Bırakılamaz"),
+           minSalary:Yup.number().min(0,"0 Dan az olamaz").required("Bu Alan Zorunludur"),
+           maxSalary: Yup.number().min(0,"0 Dan az olamaz").required("Bu alan zorunludur")
+        
 
 
 
@@ -232,6 +235,62 @@ export default function JobPostingAdd() {
                                 </Grid.Column>
                                 
                             </Grid>
+                        </Form.Field>
+                        <Form.Field>
+                            <Grid stackable>
+                                <Grid.Column  width={8}>
+                                <label style={{fontWeight: "bold"}}>Açık Posisyon sayısı</label>
+                                <Input
+                                    style={{ width: "100%" }}
+                                    id="openPositionCount"
+                                    name="openPositionCount"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.openPositionCount}
+                                    onBlur={formik.handleBlur}
+                                    type="number"
+                                    placeholder="Açık Posisyon sayısı"
+                                >
+                                </Input>
+                                {formik.errors.openPositionCount && formik.touched.openPositionCount&& (
+                                    <p style ={{color:"red"}}>{formik.errors.openPositionCount}</p>
+                                )}
+
+                                </Grid.Column>
+                                <Grid.Column width={8}>
+                                <label style={{fontWeight: "bold"}}>Son başvuru tarihi</label>
+                                <Input
+                                 style={{ width: "100%" }}
+                                 type="date"
+                                 onChange={formik.handleChange}
+                                 value={formik.values.applicationDeadline}
+                                 onBlur={formik.handleBlur}
+                                 name="applicationDeadline"   
+                                 placeholder="Son başvuru tarihi"/>
+                                 {formik.errors.applicationDeadline&& formik.touched.applicationDeadline&& (
+                                      <p style={{ color: "red" }}>{formik.errors.applicationDeadline}</p>
+                                )}
+                                </Grid.Column>
+                            </Grid>
+                        </Form.Field>
+                        <Form.Field>
+                        <label>Açıklama</label>
+                        <TextArea
+                         placeholder="Açıklama"
+                         style={{ minHeight: 100 }}
+                         fluid
+                         value={formik.values.jobDescription}
+                         name="jobDescription"
+                         onChange={formik.handleChange}
+                         onBlur={formik.handleBlur}
+
+
+                        />
+                        {formik.errors.jobDescription && formik.touched.jobDescription &&(
+                            <p style={{ color: "red" }}>{formik.errors.jobDescription}</p>
+                        )}
+
+
+
                         </Form.Field>
                         
 
