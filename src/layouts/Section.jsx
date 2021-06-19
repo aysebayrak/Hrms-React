@@ -13,7 +13,7 @@ export default function Section() {
            
            <JobPostingList/> */}
 
-           <JobPostingAdd/>
+           {/* <JobPostingAdd/> */}
 
          
         

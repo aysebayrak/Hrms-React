@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {Container,Menu,Icon,Button } from "semantic-ui-react";
 
 export default function Navi() {
@@ -11,7 +12,7 @@ export default function Navi() {
             AYŞE BAYRAK
           </Menu.Item>
           <Menu.Item name="home" />
-          {/* <Menu.Item name="Job Advert" /> */}
+          <Menu.Item  as={Link} to={"/jobPostingAdd"} name="İş İlanı Ekle" />
           <Menu.Item name="friends" />
 
 
