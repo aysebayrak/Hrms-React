@@ -1,7 +1,7 @@
 import React from 'react'
 import JobPostingList from '../pages/JobPostingList'
 import EmployeeList from '../pages/User/Employee/EmployeeList'
-
+import JobPostingAdd from '../pages/JobPostingAdd'
 
 
 
@@ -9,9 +9,13 @@ import EmployeeList from '../pages/User/Employee/EmployeeList'
 export default function Section() {
     return (
         <div>
-            <EmployeeList/>
+            {/* <EmployeeList/>
            
-           <JobPostingList/>
+           <JobPostingList/> */}
+
+           <JobPostingAdd/>
+
+         
         
             
         </div>
