@@ -6,25 +6,25 @@ export default function SideBar() {
   return (
     <div>
      <Menu inverted icon="labeled" vertical>
-        <Menu.Item 
+        {/* <Menu.Item 
           name="bullhorn"
         >
           <Icon color="orange" name="bullhorn" />
           Job Title
-        </Menu.Item>
+        </Menu.Item> */}
 
         <Menu.Item as={Link} to={"/candidate"}
           name="user"
         >
           <Icon color="orange" name="user" />
-          Candidate
+          Aday
         </Menu.Item>
 
         <Menu.Item as={Link} to={"/employer"}
           name="user"
         >
           <Icon color="orange" name="user" />
-          Employer
+          İş Veren
         </Menu.Item>
 
 
@@ -32,7 +32,7 @@ export default function SideBar() {
           name="user"
         >
           <Icon color="orange" name="user" />
-          Employee
+          Çalışan
         </Menu.Item>
       </Menu>
       

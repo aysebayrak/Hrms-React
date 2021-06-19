@@ -21,7 +21,7 @@ export default function EmployeeList() {
 
   <Header as="h2"  color="orange">
         <Icon name="folder open" />
-        <Header.Content>Employee List</Header.Content>
+        <Header.Content>Çalışan Listesi</Header.Content>
       </Header>
 
       <Table color="orange" key="orange"></Table>
@@ -29,8 +29,8 @@ export default function EmployeeList() {
 <Table singleLine>
     <Table.Header>
       <Table.Row>
-      <Table.HeaderCell>First Name</Table.HeaderCell>
-            <Table.HeaderCell>Last Name</Table.HeaderCell>
+      <Table.HeaderCell>İsim</Table.HeaderCell>
+            <Table.HeaderCell>Soy İsim</Table.HeaderCell>
             <Table.HeaderCell>Email</Table.HeaderCell>
 
         

@@ -15,7 +15,7 @@ export default function CandidateList() {
         <div>
               <Header as="h2" color="orange">
         <Icon name="folder open" />
-        <Header.Content>Candidate  List</Header.Content>
+        <Header.Content>Aday   Listesi</Header.Content>
       </Header>
       <Table color="orange" key="orange"></Table>
 
@@ -23,10 +23,10 @@ export default function CandidateList() {
       <Table singleLine>
         <Table.Header>
           <Table.Row>
-          <Table.HeaderCell>First Name</Table.HeaderCell>
-            <Table.HeaderCell>Last Name</Table.HeaderCell>
+          <Table.HeaderCell>İsim</Table.HeaderCell>
+            <Table.HeaderCell>Soy İsim</Table.HeaderCell>
             <Table.HeaderCell>Email</Table.HeaderCell>
-            <Table.HeaderCell>Detail</Table.HeaderCell>
+            <Table.HeaderCell>Detay</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
 

@@ -18,7 +18,7 @@ export default function EmployerList() {
         <div>
              <Header as="h2" color="orange">
         <Icon name="folder open" />
-        <Header.Content>Employer List</Header.Content>
+        <Header.Content>Şirket Listesi</Header.Content>
       </Header>
       <Table color="orange" key="orange"></Table>
 
@@ -26,11 +26,11 @@ export default function EmployerList() {
       <Table singleLine>
         <Table.Header>
           <Table.Row>
-          <Table.HeaderCell>Company Name</Table.HeaderCell>
-            <Table.HeaderCell>Website</Table.HeaderCell>
+          <Table.HeaderCell>Şirket Adı</Table.HeaderCell>
+            <Table.HeaderCell>İnternet Sitesi</Table.HeaderCell>
             <Table.HeaderCell>Email</Table.HeaderCell>
-            <Table.HeaderCell>Phone Number</Table.HeaderCell>
-            <Table.HeaderCell>Detail</Table.HeaderCell>
+            <Table.HeaderCell>Telefon Numarası</Table.HeaderCell>
+            <Table.HeaderCell>Detay</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
 
