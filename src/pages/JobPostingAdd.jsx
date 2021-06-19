@@ -6,7 +6,7 @@ import WorkTimeService from "../services/workTimeService";
 import WorkPlaceService from "../services/workPlaceService";
 import * as Yup from "yup";
 import { useFormik } from "formik";
-import { Button, Dropdown, Input, TextArea, Card, Form, Grid } from "semantic-ui-react";
+import { Button, Dropdown, Input, TextArea, Card, Form, Grid ,Icon,Header} from "semantic-ui-react";
 
 export default function JobPostingAdd() {
 
@@ -85,9 +85,9 @@ export default function JobPostingAdd() {
            releaseDate:Yup.string().required("Yayınlanma Tarihi Boş Bırakılamaz"),
            applicationDeadline:Yup.string().required("Son Başvuru Tarihi Boş Bırakılamaz"),
            workTimeId:Yup.string().required("Çalışma Zaman Tipi Boş Bırakılamaz"),
-           workPlaceId: Yup.string().required("Çalışma Tipi Boş Bırakılamaz"),
+           workPlaceId: Yup.string().required("Çalışma Yeri Boş Bırakılamaz"),
            minSalary:Yup.number().min(0,"0 Dan az olamaz").required("Bu Alan Zorunludur"),
-           maxSalary: Yup.number().min(0,"0 Dan az olamaz").required("Bu alan zorunludur")
+           maxSalary: Yup.number().min(0,"0 Dan az olamaz").required("Bu Alan Zorunludur")
         
 
 
@@ -121,7 +121,11 @@ export default function JobPostingAdd() {
     return (
         <div>
             <Card fluid>
-                <Card.Content header='İş İlanı Ekle'/>
+               {/* <Card.Content  header='İş İlanı Ekle'/> */}
+               <Header as="h2" color="orange">
+                <Icon name="folder open" />
+                    <Header.Content>İş İlanı Ekle</Header.Content>
+                </Header>
                 <Card.Content>
                     <Form onSubmit={formik.handleSubmit}>
                         <Form.Field style ={{marginBottom: "1rem"}}>
@@ -138,10 +142,10 @@ export default function JobPostingAdd() {
                             }
                             value={formik.values.jobTitleId}/>
                             {formik.errors.jobTitleId && formik.touched.jobTitleId && (
-                                //   <div className={"ui pointing red basic label"}>
-                                //   {formik.errors.jobPositionId}
-                                // </div>
-                                <p style={{ color: "red" }}>{formik.errors.jobTitleId}</p>
+                                  <div className={"ui pointing red basic label"}>
+                                  {formik.errors.jobTitleId}
+                                </div>
+                               
 
                               )}
                         </Form.Field>
@@ -159,7 +163,9 @@ export default function JobPostingAdd() {
                             }
                             value={formik.values.cityId} />
                               {formik.errors.cityId&& formik.touched.cityId && (
-                                  <p style = {{color :"red"}} >{formik.errors.cityId}</p>
+                                    <div className={"ui pointing red basic label"}>
+                                    {formik.errors.cityId}
+                                  </div>
                               )}
                         </Form.Field>
                         <Form.Field>
@@ -176,7 +182,9 @@ export default function JobPostingAdd() {
                             }
                             value  ={formik.values.workPlaceId} required/>
                             {formik.errors.workPlaceId && formik.touched.workPlaceId&& (
-                               <p style ={{color :"red"}}>{formik.errors.workPlaceId}</p>
+                                <div className={"ui pointing red basic label"}>
+                                {formik.errors.workPlaceId}
+                              </div>
 
                             )}
                         </Form.Field>
@@ -194,7 +202,7 @@ export default function JobPostingAdd() {
                             }
                             value ={formik.values.workTimeId}/>
                             {formik.errors.workTimeId&&formik.touched.workTimeId&& (
-                                <p style ={{color:"red"}}>{formik.errors.workTimeId}</p>
+                                 <div className={"ui pointing red basic label"}>{formik.errors.workTimeId}</div>
                             )}
                         </Form.Field>
                         <Form.Field>
@@ -212,7 +220,10 @@ export default function JobPostingAdd() {
                                   
                                 </Input>
                                 {formik.errors.minSalary&&formik.touched.minSalary &&(
-                                     <p style={{ color: "red" }}>{formik.errors.minSalary}</p>
+                                   
+                                   <div className={"ui pointing red basic label"}>
+                                   {formik.errors.minSalary}
+                                 </div>
                                 )}
 
                                 </Grid.Column>
@@ -230,7 +241,10 @@ export default function JobPostingAdd() {
 
                                 </Input>
                                 {formik.errors.maxSalary &&formik.touched.maxSalary&&(
-                                     <p style={{ color: "red" }}>{formik.errors.maxSalary}</p>
+                                   
+                                    <div className={"ui pointing red basic label"}>
+                                    {formik.errors.maxSalary}
+                                     </div>
                                 )}
                                 </Grid.Column>
                                 
@@ -252,7 +266,9 @@ export default function JobPostingAdd() {
                                 >
                                 </Input>
                                 {formik.errors.openPositionCount && formik.touched.openPositionCount&& (
-                                    <p style ={{color:"red"}}>{formik.errors.openPositionCount}</p>
+                                   <div className={"ui pointing red basic label"}>
+                                   {formik.errors.openPositionCount}
+                                 </div>
                                 )}
 
                                 </Grid.Column>
@@ -267,7 +283,9 @@ export default function JobPostingAdd() {
                                  name="applicationDeadline"   
                                  placeholder="Son başvuru tarihi"/>
                                  {formik.errors.applicationDeadline&& formik.touched.applicationDeadline&& (
-                                      <p style={{ color: "red" }}>{formik.errors.applicationDeadline}</p>
+                                      <div className={"ui pointing red basic label"}>
+                                      {formik.errors.applicationDeadline}
+                                    </div>
                                 )}
                                 </Grid.Column>
                             </Grid>
@@ -286,12 +304,24 @@ export default function JobPostingAdd() {
 
                         />
                         {formik.errors.jobDescription && formik.touched.jobDescription &&(
-                            <p style={{ color: "red" }}>{formik.errors.jobDescription}</p>
+                           <div className={"ui pointing red basic label"}>
+                           {formik.errors.jobDescription}
+                         </div>
                         )}
 
 
 
                         </Form.Field>
+                        <Button
+                        content="Ekle"
+                        labelPosition="right"
+                        color="orange"
+                        icon="add"
+                        //positive
+                        type="submit"
+                        style={{ marginLeft: "20px" }}
+
+                        />
                         
 
                     </Form>
