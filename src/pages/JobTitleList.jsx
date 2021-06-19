@@ -1,7 +1,9 @@
 import React ,{ useState, useEffect }  from 'react'
 import { Header, Table, Icon } from "semantic-ui-react";
+import JobTitleService from "../services/jobTitleService";
 
-export default function JobTitleService() {
+
+export default function JobTitleList() {
     const [titles, setTitles] = useState([]);
 
     useEffect(() =>{
@@ -29,12 +31,12 @@ export default function JobTitleService() {
         </Table.Header>
 
         <Table.Body>
-          {titles.map((title) => {
+          {titles.map((title) => (
             <Table.Row  key={title.id}>
               <Table.Cell>{title.jobTitle}</Table.Cell>
              
-            </Table.Row>;
-          })}
+            </Table.Row>
+          ))}
         </Table.Body>
       </Table>
             
