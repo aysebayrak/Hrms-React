@@ -176,9 +176,65 @@ export default function JobPostingAdd() {
                                <p style ={{color :"red"}}>{formik.errors.workPlaceId}</p>
 
                             )}
-
-
                         </Form.Field>
+                        <Form.Field>
+                            <label >Çalışma Zamanı</label>
+                            <Dropdown
+                             clearable
+                             item
+                             placeholder="Çalışma Zamanı"
+                             search
+                             selection
+                             options={getWorkTimes}
+                             onChange={(event,data) =>
+                                formik.setFieldValue("workTimeId" ,data.value)
+                            }
+                            value ={formik.values.workTimeId}/>
+                            {formik.errors.workTimeId&&formik.touched.workTimeId&& (
+                                <p style ={{color:"red"}}>{formik.errors.workTimeId}</p>
+                            )}
+                        </Form.Field>
+                        <Form.Field>
+                            <Grid stackable>
+                                <Grid.Column width={8}>
+                                <label style={{fontWeight: "bold"}}> Maaş Minimum</label>
+                                <Input
+                                 style ={{width: "100%" }}
+                                 type ="number"
+                                 placeholder="Maaş aralığı Minimum"
+                                 value={formik.values.minSalary}
+                                 name="minSalary"
+                                 onChange={formik.handleChange}
+                                 onBlur={formik.handleBlur} >
+                                  
+                                </Input>
+                                {formik.errors.minSalary&&formik.touched.minSalary &&(
+                                     <p style={{ color: "red" }}>{formik.errors.minSalary}</p>
+                                )}
+
+                                </Grid.Column>
+                                <Grid.Column width={8}>
+                                <label style={{fontWeight: "bold"}}> Maaş Maksimum</label>
+                                <Input
+                                 style ={{width: "100%" }}
+                                 type ="number"
+                                 placeholder="Maaş aralığı Maksimum"
+                                 value={formik.values.maxSalary}
+                                 name="maxSalary"
+                                 onChange={formik.handleChange}
+                                 onBlur={formik.handleBlur} >
+
+
+                                </Input>
+                                {formik.errors.maxSalary &&formik.touched.maxSalary&&(
+                                     <p style={{ color: "red" }}>{formik.errors.maxSalary}</p>
+                                )}
+                                </Grid.Column>
+                                
+                            </Grid>
+                        </Form.Field>
+                        
+
                     </Form>
                 </Card.Content>
 
