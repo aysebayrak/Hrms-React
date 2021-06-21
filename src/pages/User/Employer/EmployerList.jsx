@@ -28,21 +28,21 @@ export default function EmployerList() {
           <Table.Row>
           <Table.HeaderCell>Şirket Adı</Table.HeaderCell>
             <Table.HeaderCell>İnternet Sitesi</Table.HeaderCell>
-            <Table.HeaderCell>Email</Table.HeaderCell>
+            {/* <Table.HeaderCell>Email</Table.HeaderCell> */}
             <Table.HeaderCell>Telefon Numarası</Table.HeaderCell>
-            <Table.HeaderCell>Detay</Table.HeaderCell>
+            {/* <Table.HeaderCell>Detay</Table.HeaderCell> */}
           </Table.Row>
         </Table.Header>
 
         <Table.Body>
-          {employers.map((employer) => {
+          {employers.map((employer) => (
             <Table.Row  key={employer.id}>
               <Table.Cell>{employer.companyName}</Table.Cell>
-              <Table.Cell>{employer.website}</Table.Cell>
-              <Table.Cell>{employer.email}</Table.Cell>
+              <Table.Cell>{employer.webAddress}</Table.Cell>
+              {/* <Table.Cell>{employer.email}</Table.Cell> */}
               <Table.Cell>{employer.phoneNumber}</Table.Cell>
-            </Table.Row>;
-          })}
+            </Table.Row>
+      ))}
         </Table.Body>
       </Table>
       

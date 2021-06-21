@@ -3,6 +3,6 @@ import axios from "axios";
 
 export default class WorkTimeService{
     getWorkTimes(){
-        return axios.get("http://localhost:8080/worktime/getall")
+        return axios.get("http://localhost:8080/worktimes/getall")
     }
 }

@@ -1,7 +1,7 @@
 import axios from "axios"
 
 export default  class JobPostingService{
-    getJobAdverts(){
+    getJobPostings(){
         return axios.get("http://localhost:8080/api/jobpostings/getall")
     }
     add(values){

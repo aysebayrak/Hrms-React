@@ -43,9 +43,9 @@ export default function EmployeeList() {
         <Table.Cell>{employee.firstName}</Table.Cell>
         <Table.Cell>{employee.lastName}</Table.Cell>
         <Table.Cell>{employee.email}</Table.Cell>
-        <Table.Cell>
+        {/* <Table.Cell>
           <Button>View</Button>
-        </Table.Cell>
+        </Table.Cell> */}
       </Table.Row>
 
     ))}

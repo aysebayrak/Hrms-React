@@ -8,7 +8,7 @@ export default function JobPostingList() {
 
     useEffect(() => {
         let jobPostingService = new JobPostingService();
-        jobPostingService.getJobAdverts().then(result=> setJobPostings(result.data.data));
+        jobPostingService.getJobPostings().then(result=> setJobPostings(result.data.data));
         
       
     },[]) 
