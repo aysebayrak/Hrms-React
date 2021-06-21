@@ -1,5 +1,5 @@
 import React ,{useState ,useEffect} from 'react'
-import CandidateService from '../../../services/candidatesService';
+import CandidateService from '../../../services/candidateService';
 import { Table ,Header,  Icon  , Button } from 'semantic-ui-react'
 
 export default function CandidateList() {
@@ -26,18 +26,18 @@ export default function CandidateList() {
           <Table.HeaderCell>İsim</Table.HeaderCell>
             <Table.HeaderCell>Soy İsim</Table.HeaderCell>
             <Table.HeaderCell>Email</Table.HeaderCell>
-            <Table.HeaderCell>Detay</Table.HeaderCell>
+            {/* <Table.HeaderCell>Detay</Table.HeaderCell> */}
           </Table.Row>
         </Table.Header>
 
         <Table.Body>
-          {candidates.map((candidate) => {
+          {candidates.map((candidate) => (
             <Table.Row  key={candidate.id}>
               <Table.Cell>{candidate.firstName}</Table.Cell>
               <Table.Cell>{candidate.lastName}</Table.Cell>
               <Table.Cell>{candidate.email}</Table.Cell>
-            </Table.Row>;
-          })}
+            </Table.Row>
+          ))}
         </Table.Body>
       </Table>
             
