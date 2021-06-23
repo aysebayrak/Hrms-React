@@ -1,5 +1,5 @@
 import React from 'react'
-import Section from './Section';
+
 import SideBar from "./SideBar";
 import { Grid } from "semantic-ui-react";
 import { Route } from 'react-router-dom';

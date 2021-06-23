@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import EmployeeService from "../../../services/employeeService";
 
-import { Table ,Header,  Icon  , Button } from 'semantic-ui-react'
+import { Table ,Header,  Icon   } from 'semantic-ui-react'
 
 export default function EmployeeList() {
 

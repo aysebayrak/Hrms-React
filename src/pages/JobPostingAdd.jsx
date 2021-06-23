@@ -69,7 +69,7 @@ export default function JobPostingAdd() {
            maxSalary:"",
            openPositionCount:"",
            jobDescription: "",
-           releaseDate:"",  //yayınlanma tarihi
+          // releaseDate:"",  //yayınlanma tarihi
            applicationDeadline:"",//son başvuru 
            workTimeId:"",
            workPlaceId:"",
@@ -121,7 +121,7 @@ export default function JobPostingAdd() {
     return (
         <div>
             <Card fluid>
-               {/* <Card.Content  header='İş İlanı Ekle'/> */}
+              
                <Header as="h2" color="orange">
                 <Icon name="calendar outline" />
                     <Header.Content>İş İlanı Ekle</Header.Content>
