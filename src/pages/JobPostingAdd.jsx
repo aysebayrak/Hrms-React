@@ -74,6 +74,7 @@ export default function JobPostingAdd() {
            workTimeId:"",
            workPlaceId:"",
            employerId:1,
+          
 
        },
 
@@ -82,7 +83,7 @@ export default function JobPostingAdd() {
            cityId:Yup.string().required("Şehir Bilgisi Seçiniz"),
            openPositionCount:Yup.number().required("Alınacak Eleman Sayısı Boş Bırakılamaz"),
            jobDescription:  Yup.string().required("Açıklama Boş Bırakılamaz"),
-           releaseDate:Yup.string().required("Yayınlanma Tarihi Boş Bırakılamaz"),
+       //    releaseDate:Yup.string().required("Yayınlanma Tarihi Boş Bırakılamaz"),
            applicationDeadline:Yup.string().required("Son Başvuru Tarihi Boş Bırakılamaz"),
            workTimeId:Yup.string().required("Çalışma Zaman Tipi Boş Bırakılamaz"),
            workPlaceId: Yup.string().required("Çalışma Yeri Boş Bırakılamaz"),
@@ -99,7 +100,7 @@ export default function JobPostingAdd() {
            console.log(values);
            let jobPosting= {
                city:{id:values.cityId},
-               releaseDate:values.releaseDate,
+              // releaseDate:values.releaseDate,
                employer:{id:values.employerId},
                jobTitle:{id:values.jobTitleId},
                minSalary:values.minSalary,
@@ -108,6 +109,7 @@ export default function JobPostingAdd() {
                jobDescription:values.jobDescription,
                workTime:{id:values.workTimeId},
                workPlace:{id:values.workPlaceId},
+               applicationDeadline:values.applicationDeadline,
 
            };
            console.log(jobPosting);
@@ -291,6 +293,30 @@ export default function JobPostingAdd() {
                             </Grid>
                         </Form.Field>
                         <Form.Field>
+                            <Grid stackable>
+                                <Grid.Column  width={8}>
+                                <label style={{fontWeight: "bold"}}>Açıklama</label>
+                                <Input
+                                    style={{ width: "100%" }}
+                                    id="jobDescription"
+                                    name="jobDescription"
+                                    onChange={formik.handleChange}
+                                    value={formik.values.jobDescription}
+                                    onBlur={formik.handleBlur}
+                                    type="text"
+                                    placeholder="Açıklama"
+                                >
+                                </Input>
+                                {formik.errors.jobDescription && formik.touched.jobDescription&& (
+                                   <div className={"ui pointing red basic label"}>
+                                   {formik.errors.jobDescription}
+                                 </div>
+                                )}
+
+                                </Grid.Column>
+                                </Grid>
+                                </Form.Field>
+                        {/* <Form.Field>
                         <label>Açıklama</label>
                         <TextArea
                          placeholder="Açıklama"
@@ -311,7 +337,7 @@ export default function JobPostingAdd() {
 
 
 
-                        </Form.Field>
+                        </Form.Field> */}
                         <Button
                         content="Ekle"
                         labelPosition="right"

@@ -7,6 +7,7 @@ import JobPostingAdd from '../pages/JobPostingAdd';
 import CandidateList from '../pages/User/Candidate/CandidateList';
 import EmployeeList from '../pages/User/Employee/EmployeeList';
 import EmployerList from '../pages/User/Employer/EmployerList';
+import JobPostingList from '../pages/JobPostingList';
 
 
 export default function Dashboard() {
@@ -19,6 +20,7 @@ export default function Dashboard() {
           </Grid.Column>
           <Grid.Column width={12}>
             <Route exact path="/jobPostingAdd" component={JobPostingAdd}/>
+            <Route exact path="/jobPostingList" component={JobPostingList}/>
             <Route exact path="/candidate" component={CandidateList}/>
             <Route exact path="/employee" component={EmployeeList}/>
             <Route exact path="/employer" component={EmployerList}/>

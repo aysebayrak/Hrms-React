@@ -13,6 +13,7 @@ export default function Navi() {
           </Menu.Item>
           <Menu.Item name="home" />
           <Menu.Item  as={Link} to={"/jobPostingAdd"} name="İş İlanı Ekle" />
+          <Menu.Item  as={Link} to={"/jobPostingList"} name="İş İlanları" />
           <Menu.Item name="friends" />
 
 
