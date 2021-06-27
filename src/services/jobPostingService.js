@@ -7,4 +7,9 @@ export default  class JobPostingService{
     add(values){
         return axios.post("http://localhost:8080/api/jobpostings/add",values)
     }
+
+     updateStatus(id,status){
+        return axios.post("http://localhost:8080/api/jobpostings/statusupdate?id="
+         +id +"&status=" + status);
+    }
 }

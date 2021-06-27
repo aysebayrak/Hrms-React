@@ -6,7 +6,7 @@ import WorkTimeService from "../services/workTimeService";
 import WorkPlaceService from "../services/workPlaceService";
 import * as Yup from "yup";
 import { useFormik } from "formik";
-import { Button, Dropdown, Input, TextArea, Card, Form, Grid ,Icon,Header} from "semantic-ui-react";
+import { Button, Dropdown, Input, Card, Form, Grid ,Icon,Header} from "semantic-ui-react";
 
 export default function JobPostingAdd() {
 
