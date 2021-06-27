@@ -1,10 +1,10 @@
 import React  ,{ useState, useEffect }  from 'react'
 import JobPostingService from "../services/jobPostingService";
 import { Header, Table, Icon, Button,Label} from "semantic-ui-react";
-import { If ,Then,ElseIf,Else} from "react-if-elseif-else-render";
+import { If, Then, ElseIf, Else } from "react-if-elseif-else-render";
 import { useFormik } from "formik";
-import { render } from "@testing-library/react";
-import Dashboard from "../layouts/Dashboard";
+import { render } from '@testing-library/react';
+
 
 
 export default function JobPostingList() {
@@ -59,7 +59,7 @@ export default function JobPostingList() {
           <Table.HeaderCell>Açık Pozisyon</Table.HeaderCell>
           <Table.HeaderCell>Son Başvuru Tarihi</Table.HeaderCell>
           <Table.HeaderCell>Onay Durumu</Table.HeaderCell>
-          <Table.HeaderCell>Açıklama</Table.HeaderCell>
+          {/* <Table.HeaderCell>Açıklama</Table.HeaderCell> */}
           <Table.HeaderCell>Durum</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
@@ -97,7 +97,7 @@ export default function JobPostingList() {
 
               }
             </Table.Cell>
-            <Table.Cell>{jobPosting.jobDescription}</Table.Cell>
+            {/* <Table.Cell>{jobPosting.jobDescription}</Table.Cell> */}
             <Table.Cell>
               <Button.Group>
               <Button
