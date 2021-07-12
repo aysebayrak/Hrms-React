@@ -77,7 +77,7 @@ export default function JobPostingList() {
             <Table.Cell>{jobPosting.applicationDeadline}</Table.Cell>
             <Table.Cell>
               {
-                  <If condition ={jobPosting.status === -1}>
+                  <If condition ={jobPosting.status ===-1 }>
                     <Then>
                       <Label  color="yellow">
                         Onay Bekliyor

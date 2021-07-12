@@ -15,10 +15,10 @@ export default function Dashboard() {
         <div>  
         <Grid>
         <Grid.Row>
-          <Grid.Column width={3}>
+          <Grid.Column width={2}>
             <SideBar/>
           </Grid.Column>
-          <Grid.Column width={13}>
+          <Grid.Column width={14}>
             <Route exact path="/jobPostingAdd" component={JobPostingAdd}/>
             <Route exact path="/jobPostingList" component={JobPostingList}/>
             <Route exact path="/candidate" component={CandidateList}/>
